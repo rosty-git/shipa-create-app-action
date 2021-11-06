@@ -10,6 +10,8 @@ This action creates Shipa application
 
 ## Example usage
 
-uses: actions/shipa-create-app-action@v1
-with:
-  file-path: './apps/app.yml'
+```yaml
+  uses: actions/shipa-create-app-action@v1
+  with:
+    file-path: './apps/app.yml'
+```
