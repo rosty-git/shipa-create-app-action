@@ -1,0 +1,12 @@
+name: 'Github Action: Create Shipa App'
+description: 'Creates Shipa application'
+inputs:
+  file-path:
+    description: 'File path to Shipa app.yml'
+    required: true
+runs:
+  using: 'docker'
+  image: 'vmanilo/shipa-action:0.0.2'
+  args:
+    - app
+    - ${{ inputs.file-path }}
