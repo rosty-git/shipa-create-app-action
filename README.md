@@ -11,7 +11,14 @@ This action creates Shipa application
 ## Example usage
 
 ```yaml
-  uses: actions/shipa-create-app-action@v1
-  with:
-    file-path: './apps/app.yml'
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Create shipa app
+      uses: rostislavgit/shipa-create-app-action@v0.0.1
+      env:
+        SHIPA_TOKEN: ${{ secrets.SHIPA_TOKEN }}
+        SHIPA_HOST: ${{ secrets.SHIPA_HOST }}
+      with:
+        file-path: './example/app.yml'
 ```
