@@ -1,12 +1,23 @@
 name: 'Github Action: Create Shipa App'
 description: 'Creates Shipa application'
 inputs:
-  file-path:
+  app:
     description: 'File path to Shipa app.yml'
-    required: true
+    required: false
+  app-env:
+    description: 'File path to Shipa app-env.yml'
+    required: false
+  network-policy:
+    description: 'File path to Shipa network-policy.yml'
+    required: false
+  app-deploy:
+    description: 'File path to Shipa app-deploy.yml'
+    required: false
 runs:
   using: 'docker'
-  image: 'docker://vmanilo/shipa-action:0.0.3'
+  image: 'docker://vmanilo/shipa-action:0.0.4'
   args:
-    - app
-    - ${{ inputs.file-path }}
+    - --app=${{ inputs.app }}
+    - --app-env=${{ inputs.app-env }}
+    - --network-policy=${{ inputs.network-policy }}
+    - --app-deploy=${{ inputs.app-deploy }}

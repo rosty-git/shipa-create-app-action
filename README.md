@@ -4,9 +4,10 @@ This action creates Shipa application
 
 ## Inputs
 
-## `file-path`
-
-**Required** path to app.yml file.
+`app` - path to app.yml file.
+`app-env` - path to app-env.yml file.
+`network-policy` - path to network-policy.yml file.
+`app-deploy` - path to app-deploy.yml file.
 
 ## Example usage
 
@@ -20,5 +21,5 @@ This action creates Shipa application
         SHIPA_TOKEN: ${{ secrets.SHIPA_TOKEN }}
         SHIPA_HOST: ${{ secrets.SHIPA_HOST }}
       with:
-        file-path: './example/app.yml'
+        app: './example/app.yml'
 ```
