@@ -5,8 +5,11 @@ This action creates Shipa application
 ## Inputs
 
 `app` - path to app.yml file.
+
 `app-env` - path to app-env.yml file.
+
 `network-policy` - path to network-policy.yml file.
+
 `app-deploy` - path to app-deploy.yml file.
 
 ## Example usage
