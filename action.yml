@@ -1,4 +1,4 @@
-name: 'Github Action: Create Shipa App'
+name: 'Create Shipa App Action'
 description: 'Creates Shipa application'
 inputs:
   app:
