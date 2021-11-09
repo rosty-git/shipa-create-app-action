@@ -13,11 +13,15 @@ inputs:
   app-deploy:
     description: 'File path to Shipa app-deploy.yml'
     required: false
+  shipa-action:
+    description: 'File path to consolidated Shipa action yml file'
+    required: false
 runs:
   using: 'docker'
-  image: 'docker://vmanilo/shipa-action:0.0.4'
+  image: 'docker://vmanilo/shipa-action:0.0.6'
   args:
     - --app=${{ inputs.app }}
     - --app-env=${{ inputs.app-env }}
     - --network-policy=${{ inputs.network-policy }}
     - --app-deploy=${{ inputs.app-deploy }}
+    - --shipa-action=${{ inputs.shipa-action }}

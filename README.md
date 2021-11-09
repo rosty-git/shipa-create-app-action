@@ -12,6 +12,12 @@ This action creates Shipa application
 
 `app-deploy` - path to app-deploy.yml file.
 
+`shipa-action` - path to consolidated Shipa action yml file.
+
+All inputs are optional, but consolidated input has high priority, 
+if you chose `shipa-action` other input will be ignored.
+
+
 ## Example usage
 
 ```yaml
