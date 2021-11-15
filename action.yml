@@ -1,27 +1,11 @@
-name: 'Create Shipa App Action'
+name: 'DEV Shipa Action'
 description: 'Creates Shipa application'
 inputs:
-  app:
-    description: 'File path to Shipa app.yml'
-    required: false
-  app-env:
-    description: 'File path to Shipa app-env.yml'
-    required: false
-  network-policy:
-    description: 'File path to Shipa network-policy.yml'
-    required: false
-  app-deploy:
-    description: 'File path to Shipa app-deploy.yml'
-    required: false
   shipa-action:
     description: 'File path to consolidated Shipa action yml file'
-    required: false
+    required: true
 runs:
   using: 'docker'
-  image: 'docker://vmanilo/shipa-action:0.0.6'
+  image: 'docker://vmanilo/shipa-action:0.0.7'
   args:
-    - --app=${{ inputs.app }}
-    - --app-env=${{ inputs.app-env }}
-    - --network-policy=${{ inputs.network-policy }}
-    - --app-deploy=${{ inputs.app-deploy }}
     - --shipa-action=${{ inputs.shipa-action }}

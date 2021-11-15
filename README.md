@@ -4,19 +4,7 @@ This action creates Shipa application
 
 ## Inputs
 
-`app` - path to app.yml file.
-
-`app-env` - path to app-env.yml file.
-
-`network-policy` - path to network-policy.yml file.
-
-`app-deploy` - path to app-deploy.yml file.
-
 `shipa-action` - path to consolidated Shipa action yml file.
-
-All inputs are optional, but consolidated input has high priority, 
-if you chose `shipa-action` other input will be ignored.
-
 
 ## Example usage
 
@@ -30,5 +18,5 @@ if you chose `shipa-action` other input will be ignored.
         SHIPA_TOKEN: ${{ secrets.SHIPA_TOKEN }}
         SHIPA_HOST: ${{ secrets.SHIPA_HOST }}
       with:
-        app: './example/app.yml'
+        shipa-action: './example/shipa-action.yml'
 ```
