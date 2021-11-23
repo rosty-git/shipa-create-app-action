@@ -6,7 +6,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://vmanilo/shipa-action:0.1.9'
+  image: 'docker://vmanilo/shipa-action:0.2.0'
   args:
     - --shipa-action=${{ inputs.shipa-action }}
     - --debug
